@@ -19,4 +19,6 @@ def get_weather():
  # 3. Use jsonify to send it back to YOUR client correctly
  return (data)
 if __name__ == '__main__':
- app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    # You MUST use 0.0.0.0 to be "visible" to the internet
+    app.run(host='0.0.0.0', port=port)
