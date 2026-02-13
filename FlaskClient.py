@@ -1,3 +1,4 @@
+import os  # <--- THIS MUST BE AT THE TOP
 from flask import Flask, request,jsonify
 import requests
 app = Flask(__name__)
@@ -22,3 +23,4 @@ if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))
     # You MUST use 0.0.0.0 to be "visible" to the internet
     app.run(host='0.0.0.0', port=port)
+
